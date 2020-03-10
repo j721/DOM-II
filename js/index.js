@@ -57,22 +57,49 @@
 
 //Start of Today's Project
 
+// click events
+
 const navigation = document.querySelectorAll("a");
 navigation.forEach(element =>{
     element.addEventListener("click", ()=>{
         element.transition ="color 0.5s";
         element.style.color ="purple";
+        // console.log('the nav links changed to the color purple!');
     });
 })
 
 
 const body = document.querySelector("body");
-
 body.addEventListener('click', () => {
   body.style.backgroundColor="#62beca4d";
+//   console.log('the body background color changed to light blue!');
 });
+
+
 
 const header = document.querySelector('header');
 header.addEventListener('click',()=>{
     header.style.backgroundColor="papayawhip";
+    // console.log('the header background color changed to the same as the footer background');
 });
+
+
+// mouse event
+
+busImg.addEventListener('mouseleave', ()=>{
+    busImg.style.transform ="scale(1)";
+    busImg.style.transition ="transform 1s";
+})
+
+busImg.addEventListener("mouseenter", ()=>{
+    busImg.style.transform ="scale(0.7)";
+})
+
+navigation.addEventListener("mousenter",()=>{
+    navigation.style.transform ="scale(0.7)";
+})
+
+navigation.addEventListener("mouseleave",()=>{
+    navigation.style.transform ="scale(1)";
+    navigation.style.transition ="transform 1s";
+})
