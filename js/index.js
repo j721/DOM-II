@@ -84,6 +84,12 @@ header.addEventListener('click',()=>{
 });
 
 
+const button = document.querySelectorAll('.btn');
+button.forEach(el =>{el.addEventListener("click",()=>{
+    el.style.color ="black";
+})
+    ;})
+
 // mouse event
 
 busImg.addEventListener('mouseleave', ()=>{
@@ -95,11 +101,4 @@ busImg.addEventListener("mouseenter", ()=>{
     busImg.style.transform ="scale(0.7)";
 })
 
-navigation.addEventListener("mousenter",()=>{
-    navigation.style.transform ="scale(0.7)";
-})
 
-navigation.addEventListener("mouseleave",()=>{
-    navigation.style.transform ="scale(1)";
-    navigation.style.transition ="transform 1s";
-})
