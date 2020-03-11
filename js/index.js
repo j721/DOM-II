@@ -114,22 +114,22 @@ changeImg.addEventListener("dblclick",()=>{
 
 
 // //keypress
-// const content = document.querySelectorAll("p");
-// content.forEach(el=>{
-//     el.addEventListener("keypress",(e)=>{
-//     content.style.color ="pink";
+// const content = document.querySelectorAll("body");
+// content.addEventListener("keypress",(event)=>{
+//     content.style.backgroundColor = "#62beca4d";
 // })
 
 // //keydown 
-// const body2 = document.querySelector('body');
-// body2.addEventListener("keydown",()=>{
-//     body2.style.background="#62beca4d";
-// })
+const bodyThree = document.querySelector('body');
+bodyThree.addEventListener("keydown",()=>{
+    bodyThree.style.backgroundColor="#62beca4d";
+})
 
 // //keyup
-const header = document.querySelector('header');
-header.addEventListener('keyup',()=>{
-    header.style.backgroundColor="papayawhip";
+
+const bodyTwo = document.querySelector("body");
+bodyTwo.addEventListener("keyup",()=>{
+    bodyTwo.style.backgroundColor= "pink";
 });
 
 
@@ -146,3 +146,12 @@ header.addEventListener('keyup',()=>{
 // alert
 
 //cut
+
+//resize
+
+// const lastImg = document.querySelector(".img-fluid rounded");
+
+// window.addEventListener('resize', (event) => {
+//     lastImg.src="Users/julia/Documents/git/DOM-II/img/fun.jpg"
+//     alert('resizing image');
+// });
