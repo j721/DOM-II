@@ -93,7 +93,7 @@ busImg.addEventListener("mouseenter", ()=>{
 const button = document.querySelectorAll('.btn');
 button.forEach(el =>{el.addEventListener("mouseover",()=>{
     el.style.color ="black";
-    el.style.backgroundColor="pink";
+    el.style.backgroundColor="#9980FA";
 })
     ;})
 
@@ -112,13 +112,6 @@ changeImg.addEventListener("dblclick",()=>{
     changeImg.src ="https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80";
 })
 
-
-// //keypress
-// const content = document.querySelectorAll("body");
-// content.addEventListener("keypress",(event)=>{
-//     content.style.backgroundColor = "#62beca4d";
-// })
-
 // //keydown 
 const bodyThree = document.querySelector('body');
 bodyThree.addEventListener("keydown",()=>{
@@ -135,17 +128,29 @@ bodyTwo.addEventListener("keyup",()=>{
 
 
 // //scroll
-// window.addEventListener('scroll', () => {
-//   body.style.backgroundColor="purple";
-// })
+const paragraph =document.querySelector('p');
+window.addEventListener('scroll', () => {
+  paragraph.style.color="#c0392b";
+})
 
 //copy 
 
-// copy 
+const source =document.querySelector('body');
+source.addEventListener('copy',(e)=>{
+    alert('DO NOT COPY');
+})
 
-// alert
 
-//cut
+
+
+
+
+
+//focus
+// const heading =document.querySelector('header');
+// heading.addEventListener('focus',()=>{
+//     heading.style.backgroundColor="green";
+// })
 
 //resize
 
@@ -155,3 +160,10 @@ bodyTwo.addEventListener("keyup",()=>{
 //     lastImg.src="Users/julia/Documents/git/DOM-II/img/fun.jpg"
 //     alert('resizing image');
 // });
+
+
+// //keypress
+// const paragraph = document.querySelector("p");
+// paragraph.addEventListener("keypress",(event)=>{
+//     paragraph.style.color = "green";
+// })
