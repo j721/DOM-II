@@ -130,7 +130,7 @@ bodyTwo.addEventListener("keyup",()=>{
 // //scroll
 const paragraph =document.querySelector('p');
 window.addEventListener('scroll', () => {
-  paragraph.style.color="#c0392b";
+  paragraph.style.color="purple";
 })
 
 //copy 
