@@ -57,48 +57,92 @@
 
 //Start of Today's Project
 
-// click events
+// click
 
-const navigation = document.querySelectorAll("a");
+const navBar= document.querySelector(".nav");
+navBar.addEventListener("click",(e)=>{
+    e.preventDefault();
+})
+
+const navigation = document.querySelectorAll(".nav a");
 navigation.forEach(element =>{
-    element.addEventListener("click", ()=>{
-        element.transition ="color 0.5s";
-        element.style.color ="purple";
-        // console.log('the nav links changed to the color purple!');
+    element.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        e.preventDefault();
+        console.log(`${e.target.innerText} was clicked`)
     });
 })
 
 
-const body = document.querySelector("body");
-body.addEventListener('click', () => {
-  body.style.backgroundColor="#62beca4d";
-//   console.log('the body background color changed to light blue!');
-});
-
-
-
-const header = document.querySelector('header');
-header.addEventListener('click',()=>{
-    header.style.backgroundColor="papayawhip";
-    // console.log('the header background color changed to the same as the footer background');
-});
-
-
-const button = document.querySelectorAll('.btn');
-button.forEach(el =>{el.addEventListener("click",()=>{
-    el.style.color ="black";
-})
-    ;})
-
-// mouse event
+// // mouseleave
 
 busImg.addEventListener('mouseleave', ()=>{
     busImg.style.transform ="scale(1)";
     busImg.style.transition ="transform 1s";
 })
 
+// //mouseenter
+
 busImg.addEventListener("mouseenter", ()=>{
     busImg.style.transform ="scale(0.7)";
 })
 
 
+// //mouseover
+
+const button = document.querySelectorAll('.btn');
+button.forEach(el =>{el.addEventListener("mouseover",()=>{
+    el.style.color ="black";
+    el.style.backgroundColor="pink";
+})
+    ;})
+
+// //mouseout
+
+button.forEach(el =>{el.addEventListener("mouseout",()=>{
+    el.style.color ="white";
+    el.style.backgroundColor="#17A2B8";
+})
+    ;})
+
+
+// //double click event
+const changeImg = document.querySelector('#beachImg');
+changeImg.addEventListener("dblclick",()=>{
+    changeImg.src ="https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80";
+})
+
+
+// //keypress
+// const content = document.querySelectorAll("p");
+// content.forEach(el=>{
+//     el.addEventListener("keypress",(e)=>{
+//     content.style.color ="pink";
+// })
+
+// //keydown 
+// const body2 = document.querySelector('body');
+// body2.addEventListener("keydown",()=>{
+//     body2.style.background="#62beca4d";
+// })
+
+// //keyup
+const header = document.querySelector('header');
+header.addEventListener('keyup',()=>{
+    header.style.backgroundColor="papayawhip";
+});
+
+
+
+// //scroll
+// window.addEventListener('scroll', () => {
+//   body.style.backgroundColor="purple";
+// })
+
+//copy 
+
+// copy 
+
+// alert
+
+//cut
