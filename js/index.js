@@ -140,30 +140,32 @@ source.addEventListener('copy',(e)=>{
     alert('DO NOT COPY');
 })
 
-
-
-
-
-
-
 //focus
 // const heading =document.querySelector('header');
 // heading.addEventListener('focus',()=>{
 //     heading.style.backgroundColor="green";
 // })
 
+
 //resize
 
-// const lastImg = document.querySelector(".img-fluid rounded");
+const lastImg = document.querySelector(".img-fluid");
 
-// window.addEventListener('resize', (event) => {
-//     lastImg.src="Users/julia/Documents/git/DOM-II/img/fun.jpg"
-//     alert('resizing image');
-// });
+window.addEventListener('resize', (event) => {
+    lastImg.src="../img/fun.jpg"
+    alert('resizing image');
+});
 
 
 // //keypress
-// const paragraph = document.querySelector("p");
-// paragraph.addEventListener("keypress",(event)=>{
-//     paragraph.style.color = "green";
+const paragraphs = document.querySelectorAll("p");
+document.body.addEventListener("keypress",(event)=>{
+    console.log(event.keyCode);
+    paragraphs.forEach(item =>{
+            item.style.color ="green";
+    })
+ 
+})
+
+//         paragraph2.style.color = "green";
 // })
